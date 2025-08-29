@@ -176,3 +176,16 @@ git add .
 git commit -m "Your message"
 git push origin main
 ```
+### 🌱 Working with Branches
+- Do not commit directly to `main`.
+- Always create a new branch for your feature or fix:
+```bash
+git checkout -b feature-name
+```
+
+- After making changes, push your branch:
+```bash
+git push origin feature-name
+```
+
+- Open a Pull Request (PR) on GitHub to merge into `main`.
