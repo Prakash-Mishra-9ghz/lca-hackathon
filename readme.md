@@ -5,6 +5,18 @@ An AI-powered Life Cycle Assessment (LCA) tool for metals like aluminium and cop
 
 ---
 
+## ⚡ Quickstart
+```bash
+git clone https://github.com/Prakash-Mishra-9ghz/lca-hackathon.git
+cd lca-hackathon/backend && python -m venv venv && .\venv\Scripts\activate && pip install -r requirements.txt && python app.py
+cd ../frontend && npm install && npm start
+```
+
+- Backend → http://localhost:5000  
+- Frontend → http://localhost:3000  
+
+---
+
 ## 🚀 Tech Stack
 - **Frontend:** React (Create React App)
 - **Backend:** Flask (Python)
@@ -17,8 +29,10 @@ An AI-powered Life Cycle Assessment (LCA) tool for metals like aluminium and cop
 lca-hackathon/  
 │── backend/        → Flask API  
 │   ├── app.py  
-│   ├── lca_engine.py  
+│   ├── 
+│   ├── requirements.txt  
 │   └── models/  
+|       |__ lca_engine.py  
 │  
 │── frontend/       → React UI  
 │   ├── src/  
@@ -44,8 +58,9 @@ cd lca-hackathon
 ```bash
 cd backend
 python -m venv venv
-.\venv\Scripts\activate   # Windows
-pip install flask flask-cors
+.\venv\Scripts\activate   # PowerShell
+venv\Scripts\activate.bat # cmd.exe
+pip install -r requirements.txt
 python app.py
 ```
 
@@ -84,11 +99,80 @@ npm start
 ---
 
 ## 👥 Team
--   
--   
-- 
--
--
 -  
+-   
+-   
 
 ---
+
+## 🖥️ Setup Guide for Contributors
+
+When you fork/clone this repo, do **not** push `venv/` or `node_modules/`.  
+These will be created locally on your machine.
+
+---
+
+### 🔧 Backend (Python + Flask)
+1. Navigate to backend:
+```bash
+cd backend
+```
+
+2. Create a virtual environment:
+
+- **PowerShell**:
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+- **Command Prompt**:
+```bash
+python -m venv venv
+venv\Scripts\activate.bat
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run backend:
+```bash
+python app.py
+```
+
+➡ Runs on **http://localhost:5000**
+
+---
+
+### 🎨 Frontend (React)
+1. Navigate to frontend:
+```bash
+cd frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run frontend:
+```bash
+npm start
+```
+
+➡ Opens on **http://localhost:3000**
+
+---
+
+### ✅ Notes for Contributors
+- Do **not** commit `venv/` or `node_modules/` (they are ignored via `.gitignore`).  
+- Only commit actual **code changes** in `backend/*.py` or `frontend/src/*.js`.  
+- Before pushing:
+```bash
+git pull origin main
+git add .
+git commit -m "Your message"
+git push origin main
+```
